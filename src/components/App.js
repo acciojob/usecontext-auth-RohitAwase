@@ -2,12 +2,16 @@
 import React from "react";
 import './../styles/App.css';
 
-const App = () => {
+import { AuthProvider } from "./AuthContext";
+import Auth from "./Auth";
+
+function App() {
   return (
-    <div>
-        {/* Do not remove the main div */}
-    </div>
-  )
+    <AuthProvider>
+      <Auth />
+    </AuthProvider>
+  );
 }
 
-export default App
+export default App;
+
